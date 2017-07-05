@@ -3,8 +3,8 @@ Simple chat in React js + Cosmic js
 
 ### Install
 ```
-git clone https://github.com/tonyspiro/react-chat-app
-cd react-chat-app
+git clone https://github.com/emmanueldd/simple-react-chat.git
+cd simple-react-chat
 npm install
 ```
 #### Run the app
