@@ -61,7 +61,7 @@ class App extends Component {
       message: message_text,
       private: this.refs.private.checked.toString()
     }
-    // Send message out
+    // Send the message via socket io
     socket.emit('chat message', message_emit)
     this.setState({
       data: {

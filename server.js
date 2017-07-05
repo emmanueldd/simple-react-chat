@@ -3,18 +3,18 @@ import express from 'express'
 const app = express()
 // Set port
 app.set('port', process.env.PORT || 3000)
-// Static files
+// Here, we import our Static files (dist..)
 app.use(express.static('public'))
 const http = require('http').Server(app)
 const io = require('socket.io')(http)
 
-// Config
+// Here, we import our Config
 import config from './config'
 
-// Models
+// Here, we import our uniq model, Message
 import Message from './models/Message'
 
-// Listen for a connection
+// Here, we listen for a connection through socket.io
 io.on('connection', socket => {
   // Create message
   socket.on('chat message', params => {
@@ -24,7 +24,7 @@ io.on('connection', socket => {
   })
 })
 
-// Route
+// Here, we set the Route
 app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html')
 })
